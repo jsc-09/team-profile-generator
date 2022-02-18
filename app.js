@@ -24,10 +24,19 @@ async function init() {
                 type: 'input',
                 message: 'Office Number',
                 name: 'officeNumber'
+            },
+            {
+                type: 'list',
+                message: 'Add a new member',
+                name: 'member',
+                choices: ['Engineer','Intern']
+
             }
         ])
-        .then((answers) => {
-            console.log(answers);
-        });
+        if (answers.choices === 'Engineer'){
+            console.log(answers.choices);
+        } else {
+            console.log("select again")
+        };
 };
 init();
