@@ -105,48 +105,22 @@ async function crossRoads() {
     
 }
 async function addEngineer() {
-    
+    const {name, id, email, github} = await inquirer.prompt (engineerQues);
+    console.log(name, id, email, github);
+    const engineer = new Engineer (name, id, email, github);
+    Team.push(engineer)
+    crossRoads();
 }
 async function addIntern() {
-    
+    const {name, id, email, school} = await inquirer.prompt (internQues);
+    console.log(name, id, email, school);
+    const intern = new Inter (name, id, email, school);
+    Team.push(intern)
+    crossRoads();
 }
 
 function buildTeam() {
 
 }
 
-async function init() {
-    const answers = await inquirer
-        .prompt (managerQues)
-    while (true) {
-    let newMember = await inquirer
-        .prompt([
-            {
-                type: 'list',
-                message: 'Add a new member',
-                name: 'member',
-                choices: ['Engineer', 'Intern']
-            }
-        ]);
-        if (newMember.member === 'Engineer') {
-            let engineer = await inquirer
-                .prompt(engineerQues)
-        } else {
-            let intern = await inquirer
-                .prompt(internQues)
-        };
-        let endQues = await inquirer
-        .prompt([
-            {
-                type: 'confirm',
-                message: 'Do you want to add another member',
-                name: 'continue'
-            },
-        ]);
-        if (endQues.continue == false)
-        break;
-
-    }
-};
-//init();
 addManager();
