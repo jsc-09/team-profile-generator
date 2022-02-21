@@ -136,7 +136,7 @@ function buildTeam() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="assets/styles.css">
         <script src="https://kit.fontawesome.com/fd836be9ea.js" crossorigin="anonymous"></script>
         <title>My Team</title>
     </head>
@@ -148,7 +148,7 @@ function buildTeam() {
     for (let i = 0; i < Team.length; i++) {
         htmlContent += Team[i].createCard()
     }
-    console.log(htmlContent);
+   // console.log(htmlContent);
 
     htmlContent += `
     </div>
