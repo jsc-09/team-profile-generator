@@ -22,3 +22,11 @@ h4{
 p{
     font-size: 100% !important;
 }
+
+a {
+    color: rgb(13 148 136);
+    text-decoration: underline;
+}
+a:hover {
+    color: rgb(45 212 191);
+}
