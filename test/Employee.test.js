@@ -37,7 +37,7 @@ test('Employee returns id when getId is called', () => {
 
 test('Employee returns email when getEmail is called', () => {
     const email = 'test@email.com';
-    const e = new Employee('Dane',1 , email);
+    const e = new Employee('Dane', 1 , email);
     expect(e.getEmail()).toBe(email)
 })
 
